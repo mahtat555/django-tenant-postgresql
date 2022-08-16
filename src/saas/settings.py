@@ -109,6 +109,8 @@ TENANT_MODEL = "customers.Client"
 
 TENANT_DOMAIN_MODEL = "customers.Domain"
 
+SHOW_PUBLIC_IF_NO_TENANT_FOUND = True
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
