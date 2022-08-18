@@ -43,12 +43,16 @@ THIRDPARTY_APPS = [
 
 SHARED_APPS = (
     "django_tenants",
-    "customers",
     *DEFAULT_APPS,
+    *THIRDPARTY_APPS,
+    "customers",
+    "apps.books",
 )
 
 TENANT_APPS = (
-    "apps.books",
+    *DEFAULT_APPS,
+    *THIRDPARTY_APPS,
+    "apps.ebooks",
 )
 
 INSTALLED_APPS = list(SHARED_APPS) + \
@@ -67,6 +71,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "saas.urls"
+PUBLIC_SCHEMA_URLCONF = "saas.urls_public"
 
 TEMPLATES = [
     {
